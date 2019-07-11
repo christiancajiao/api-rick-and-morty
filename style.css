@@ -1,0 +1,116 @@
+html {
+  height: 100%;
+}
+body {
+  background: linear-gradient(rgb(110, 206, 169), rgb(123, 223, 123));
+  height: 100%;
+}
+#imagen-fondo {
+  position: absolute;
+  bottom: 0;
+  left: 43%;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+}
+#fotos {
+  top: 380px;
+  display: grid;
+  grid-gap: 4px;
+  grid-template-rows: repeat(400px);
+  grid-template-columns: repeat(auto-fill, 400px);
+  padding-left: 22%;
+}
+#grande {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-rows: 300px;
+  grid-template-columns: 300px 300px 300px 300px 300px;
+  padding-left: 25%;
+}
+#encabezado {
+  padding-left: 30%;
+  width: 900px;
+}
+#navbar {
+  position: absolute;
+  top: 400px;
+  right: 85%;
+  width: 150px;
+  height: 200px;
+}
+#navbar2 {
+  position: absolute;
+  top: 400px;
+  left: 85%;
+  width: 150px;
+  height: 200px;
+}
+
+.personajes {
+  box-shadow: 5px 10px 45px 5px #5eff00;
+}
+.personajes:hover {
+  width: 310px;
+  height: 310px;
+  opacity: 0.2;
+}
+
+.datos {
+  background-color: rgb(12, 110, 12);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(181, 234, 241);
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  text-align: center;
+}
+.contenedor {
+  position: relative;
+}
+#frase {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 45px;
+  text-align: center;
+  color: rgb(222, 248, 230);
+}
+
+/* aca quiero el responsive para movil pero aun no puedo encontrar el problema por que me cambia toda la pagina cuando cambio el max por el min,'*/
+@media only screen and (max-width: 800px) {
+  #encabezado {
+    padding-left: 40%;
+    width: 300px;
+  }
+  #fotos {
+    top: 380px;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-rows: repeat(400px);
+    grid-template-columns: repeat(auto-fill, 400px);
+    padding-left: 35%;
+  }
+  #navbar {
+    position: absolute;
+    top: 1100px;
+    left: 35%;
+    width: 150px;
+    height: 200px;
+  }
+  #navbar2 {
+    position: absolute;
+    top: 1100px;
+    left: 75%;
+    width: 150px;
+    height: 200px;
+  }
+  #imagen-fondo {
+    position: absolute;
+    bottom: 0;
+    left: 34%;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+  }
+}
