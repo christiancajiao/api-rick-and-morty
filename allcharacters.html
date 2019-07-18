@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick and Morty</title>
     <link href="styleallcharacters.css" rel="stylesheet" />
   </head>
   <body>
-    <img id="encabezado" src="img/logo.png" />
+    <header>
+        <img id="encabezado" src="img/logo.png" />
+    </header>
+    <main>
     <a href="index.html"> <img id="navbar" src="img/portaLHOME.png"/></a>
     <a href="allcharacters.html"
       ><img id="navbar2" src="img/portalrefresh.png"
@@ -36,6 +40,7 @@
       <div class="paginas">19</div>
       <div class="paginas">20</div>
     </div>
+  </main>
     <!--
     <button id="back">
       Back
@@ -43,5 +48,13 @@
      -->
 
     <script src="appallcharactes.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
   </body>
 </html>

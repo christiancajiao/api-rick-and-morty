@@ -13,9 +13,10 @@ body {
 
 #encabezado {
   padding-left: 30%;
-  width: 900px;
+  width: 50%;
 }
 #navbar {
+  z-index: 3;
   position: sticky;
   top: 400px;
   right: 90%;
@@ -23,6 +24,7 @@ body {
   height: 200px;
 }
 #navbar2 {
+  z-index: 3;
   position: sticky;
   top: 400px;
   left: 90%;
@@ -45,8 +47,7 @@ body {
   font-size: 40px;
   text-align: center;
   padding-top: 45px;
-  width: 1520px;
-  height: 100px;
+  width: 85%;
   left: 10%;
   position: relative;
 }
@@ -58,8 +59,7 @@ body {
   font-size: 40px;
   text-align: center;
   padding-top: 45px;
-  width: 1520px;
-  height: 100px;
+  width: 85%;
   left: 10%;
   position: relative;
 }
@@ -164,5 +164,109 @@ body {
   }
   .paginas {
     display: none;
+  }
+}
+@media only screen and (max-width: 1280px) and (min-width: 800px){
+  
+  #fotos {
+    
+    display: grid;
+    
+    
+    grid-gap: 4px;
+    grid-template-rows: 300px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  #encabezado {
+    padding-left: 30%;
+    width: 50%;
+  }
+  #navbar {
+    z-index: 3;
+    position: sticky;
+    top: 400px;
+    right: 90%;
+    width: 100px;
+    height: 150px;
+  }
+  #navbar2 {
+    z-index: 3;
+    position: sticky;
+    top: 400px;
+    left: 90%;
+    width: 100px;
+    height: 150px;
+  }
+  
+  #lista {
+    display: none;
+    
+  }
+  #next {
+    color: rgb(9, 255, 0);
+    background-color: rgb(3, 44, 30);
+    border: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 45px;
+    width: 85%;
+    height: 100px;
+    left: 10%;
+    position: relative;
+  }
+  #next:hover {
+    color: rgb(7, 41, 5);
+    background-color: rgb(134, 218, 190);
+    border: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 45px;
+    width: 85%;
+    left: 10%;
+    position: relative;
+  }
+  .paginas {
+    background-color: rgb(199, 240, 206);
+    text-align: center;
+    padding-top: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold';
+    color: rgb(26, 116, 46);
+    margin-top: 10px;
+    margin-right: 5px;
+    right: 200px;
+  }
+  .paginas:hover {
+    background-color: rgb(20, 131, 75);
+    color: rgb(206, 255, 239);
+  }
+  .personajes {
+    box-shadow: 5px 10px 45px 5px #5eff00;
+  }
+  .personajes:hover {
+    box-shadow: 5px 10px 8px #888888;
+    width: 310px;
+    height: 310px;
+    opacity: 0.2;
+  }
+  
+  .datos {
+    background-color: rgb(12, 110, 12);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(204, 243, 248);
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    text-align: center;
+  }
+  .contenedor {
+    position: relative;
   }
 }
