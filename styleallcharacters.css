@@ -1,18 +1,50 @@
-body {
-  background: linear-gradient(rgb(110, 206, 169), rgb(123, 223, 123));
+
+.background.gradient {
+  background: ##7e7e7e;
+  background: linear-gradient(to bottom right, #27665e 0%, #55d45b 100%);
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
 }
+.imagenani {
+  position: relative;
+    width: 60%;
+    height: 60%;
+    opacity: 0.2;
+    left: -1000px;
+    animation: example 10s infinite linear;
+    
+  }
+ 
+  @keyframes example {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(2600px)  rotate(300deg);
+    }
+    }
 #fotos {
-  padding-left: 12%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
   display: grid;
   max-width: 80%;
-
+ 
   grid-gap: 4px;
   grid-template-rows: 300px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+header {
+  text-align: center;
+}
 #encabezado {
-  padding-left: 30%;
+  position: relative;
   width: 50%;
 }
 #navbar {
@@ -81,48 +113,56 @@ body {
   color: rgb(206, 255, 239);
 }
 .personajes {
-  box-shadow: 5px 10px 45px 5px #5eff00;
+  position: relative;
+  z-index: 2;
 }
 .personajes:hover {
-  box-shadow: 5px 10px 8px #888888;
-  width: 310px;
-  height: 310px;
   opacity: 0.2;
+  width: 100%;
+  height: 100%;
 }
 
+.contenedor {
+  position: relative;
+  width: 300px;
+}
 .datos {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: rgb(12, 110, 12);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(204, 243, 248);
-  position: absolute;
-  top: 0;
-  width: 300px;
-  height: 300px;
-  z-index: -1;
+  font-size-adjust: inherit; 
   text-align: center;
-}
-.contenedor {
-  position: relative;
+  height: 100%;
+  width: 100%;
 }
 @media only screen and (max-width: 800px) {
+  header {
+    text-align: center;
+  }
   #encabezado {
-    padding-left: 35%;
-    width: 300px;
+    position: relative;
+    width: 50%;
   }
   #fotos {
-    top: 100px;
+    margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+    
     display: grid;
     grid-gap: 4px;
     grid-template-rows: repeat(300px);
     grid-template-columns: repeat(auto-fill, 300px);
-    padding-left: 35%;
+    
   }
   #navbar {
     position: sticky;
     top: 100px;
     right: 85%;
-    width: 150px;
-    height: 200px;
+    width: 15%;
+    height: 15%;
     z-index: 3;
   }
   #navbar2 {
@@ -137,6 +177,7 @@ body {
     z-index: -1;
   }
   #next {
+    position: relative;
     color: rgb(9, 255, 0);
     background-color: rgb(3, 44, 30);
     border: none;
@@ -144,12 +185,13 @@ body {
     font-size: 40px;
     text-align: center;
     padding-top: 45px;
-    width: 420px;
+    width: 325px;
     height: 100px;
-    left: 20%;
-    position: relative;
+    left: 12%;
+   
   }
   #next:hover {
+    position: relative;
     color: rgb(7, 41, 5);
     background-color: rgb(134, 218, 190);
     border: none;
@@ -157,19 +199,45 @@ body {
     font-size: 40px;
     text-align: center;
     padding-top: 45px;
-    width: 420px;
+    width: 325px;
     height: 100px;
-    left: 20%;
-    position: relative;
+    left: 12%;
   }
   .paginas {
     display: none;
+  }
+  .personajes {
+    position: relative;
+    z-index: 2;
+  }
+  .personajes:hover {
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .contenedor {
+    position: relative;
+    width: 300px;
+  }
+  .datos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(12, 110, 12);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(204, 243, 248);
+    text-align: center;
+    height: 100%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 1280px) and (min-width: 800px){
   
   #fotos {
-    
+    margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
     display: grid;
     
     
@@ -177,9 +245,11 @@ body {
     grid-template-rows: 300px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
-  
+  header {
+    text-align: center;
+  }
   #encabezado {
-    padding-left: 30%;
+    position: relative;
     width: 50%;
   }
   #navbar {
@@ -246,27 +316,28 @@ body {
     color: rgb(206, 255, 239);
   }
   .personajes {
-    box-shadow: 5px 10px 45px 5px #5eff00;
+    position: relative;
+    z-index: 2;
   }
   .personajes:hover {
-    box-shadow: 5px 10px 8px #888888;
-    width: 310px;
-    height: 310px;
     opacity: 0.2;
+    width: 100%;
+    height: 100%;
   }
   
+  .contenedor {
+    position: relative;
+    width: 300px;
+  }
   .datos {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: rgb(12, 110, 12);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(204, 243, 248);
-    position: absolute;
-    top: 0;
-    width: 300px;
-    height: 300px;
-    z-index: -1;
     text-align: center;
-  }
-  .contenedor {
-    position: relative;
+    height: 100%;
+    width: 100%;
   }
 }
